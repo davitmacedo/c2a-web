@@ -1,21 +1,20 @@
 <?php 
-	// Configurações de segurança para cookies de sessão
-	ini_set('session.cookie_httponly', 1);
-	ini_set('session.cookie_secure', 1);
-	ini_set('session.cookie_samesite', 'Strict');
 	session_start();
 	setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 	date_default_timezone_set('America/Belem');
 	spl_autoload_register(function($class){include('classes/'.$class.'.php');});
-  define('WWW', 'http://localhost/consultas/');
+	require 'vendor/autoload.php';
+	$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+	$dotenv->load();
+  define('WWW', 'http://localhost/c2a-web/');
   define('WWW_START', 'localhost');
   define('TITULO', 'C2A');
 	define('BASE_DIR_PATH', __DIR__.'/img/');
 	//CONECTA AO BANCO DE DADOS
-	define('HOST', 'localhost');
-	define('USER', 'root');
-	define('PASSWORD', '');
-	define('DATABASE', 'c2a');
+	define('HOST', $_ENV['HOST']);
+	define('USER', $_ENV['USER']);
+	define('PASSWORD', $_ENV['PASSWORD']);
+	define('DATABASE', $_ENV['DATABASE']);
 	
 	//acrecenta zero a esquerda
 	function ZeroEsquerda($numero,$casas){

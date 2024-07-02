@@ -1,9 +1,6 @@
  <?php /*ini_set('display_errors', 1);
 error_reporting(E_ALL);*/
   include('config.php');
-  echo '<pre>';
-  var_dump(getenv());
-  echo '</pre>';
   if (Gerenciador::logado()==false) {
     include('login.php');
   }else{
