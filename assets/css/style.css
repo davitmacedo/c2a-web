@@ -67,7 +67,7 @@ textarea {
   background-color: var(--cor-fundo)!important;
   color: white!important;
 }
-.card, .modal-content{
+.card, .bg-card, .modal-content{
   background-color:  var(--cor-card);
 }
 a{
