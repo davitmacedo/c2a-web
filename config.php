@@ -12,7 +12,7 @@
 	define('BASE_DIR_PATH', __DIR__.'/img/');
 	//CONECTA AO BANCO DE DADOS
 	define('HOST', $_ENV['HOST']);
-	define('USER', $_ENV['USER']);
+	define('USER', $_ENV['USERDB']);
 	define('PASSWORD', $_ENV['PASSWORD']);
 	define('DATABASE', $_ENV['DATABASE']);
 	
