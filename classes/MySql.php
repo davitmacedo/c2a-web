@@ -19,5 +19,20 @@
 			}
 			return self::$pdo;
 		}
+		public static function testeConexao()
+		{
+			try {
+				$pdo = self::conectar();
+				$stmt = $pdo->query("SELECT 1");
+				$result = $stmt->fetch();
+				if ($result) {
+					echo "Conexão estabelecida e consulta executada com sucesso!";
+				} else {
+					echo "Conexão estabelecida, mas a consulta não retornou resultados.";
+				}
+			} catch (PDOException $e) {
+				echo "Erro ao executar consulta: " . $e->getMessage();
+			}
+		}
 	}
 ?>
