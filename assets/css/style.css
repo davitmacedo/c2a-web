@@ -1,0 +1,144 @@
+/* Definindo variáveis */
+:root {
+  --cor-fundo: #151d27;
+  --cor-card: #263241;
+  --cor-text: #96a6b7;
+  --cor-primaria: #3498db;
+}
+/*
+SCROLL
+*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e26c0e; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+#scroll-top {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    display: block;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 999;
+    width: 46px;
+    height: 46px;
+    line-height: 43px;
+    font-size: 24px;
+    border-radius: 50%;
+    opacity: 0;
+    background: #3a3a3a;
+    transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    text-align: center;
+    color: #fff;
+}
+#scroll-top.fixed {
+    opacity: 1;
+    bottom: 10px;
+    visibility: visible;
+}
+
+#scroll-top:hover{
+	background: orange;
+	color: white;
+}
+textarea {
+	width:100%;
+}
+.bg-padrao {
+  background-color: var(--cor-primaria);
+}
+.bg-body{
+  background-color: var(--cor-fundo)!important;
+  color: white
+}
+.bg-card{
+  background-color:  var(--cor-card);
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+a:hover{
+	color: orange;
+}
+.pagination{
+	overflow-x:auto; 
+}
+.alert-msg{
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	padding: 10px 2%;
+	max-width: 300px;
+	border-radius: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	z-index:1057;
+}
+.alert-msg .success{
+	background: #79f011!important;
+}
+.alert-msg .fail{
+	background: #fc3d23;
+}
+/* TABLE */
+thead{
+  color: white;
+}
+tbody tr th{
+  color: var(--cor-text);
+}
+/*LOGIN*/
+html,
+body {
+  height: 100%;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[id="usuario"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: var(--cor-fundo);
+  color: white;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: var(--cor-fundo);
+  color: white;
+}
+
+.form-signin input[id="usuario"]:focus, .form-signin input[type="password"]:focus{
+  background-color: var(--cor-card) inset;
+}
+.form-signin input[id="usuario"]:-webkit-autofill, .form-signin input[type="password"]:-webkit-autofill{
+  -webkit-box-shadow: var(--cor-card) inset;
+}
