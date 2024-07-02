@@ -40,6 +40,14 @@
                 <li><a class="dropdown-item" href="<?php echo WWW; ?>usuarios/listar">LISTAR</a></li>
               </ul>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropTotal" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                RELATÓRIOS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropTotal">
+                <li><a class="dropdown-item" href="<?php echo WWW; ?>relatorios/relatorio">GERADOR</a></li>
+              </ul>
+            </li>
             <!-- <li class="nav-item"><a class="nav-link" href="<?php //echo WWW;?>?url=busca"><i class="fas fa-search"></i></a></li> -->
           </ul>
           <ul class="navbar-nav ms-md-auto">

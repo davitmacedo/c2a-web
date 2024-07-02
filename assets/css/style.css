@@ -63,11 +63,11 @@ textarea {
 .bg-padrao {
   background-color: var(--cor-primaria);
 }
-.bg-body{
+.bg-body, input, textarea, select{
   background-color: var(--cor-fundo)!important;
-  color: white
+  color: white!important;
 }
-.bg-card{
+.card, .modal-content{
   background-color:  var(--cor-card);
 }
 a{
@@ -102,7 +102,7 @@ a:hover{
 thead{
   color: white;
 }
-tbody tr th{
+tbody tr td{
   color: var(--cor-text);
 }
 /*LOGIN*/
@@ -136,8 +136,8 @@ body {
   color: white;
 }
 
-.form-signin input[id="usuario"]:focus, .form-signin input[type="password"]:focus{
-  background-color: var(--cor-card) inset;
+.form-signin input[id="usuario"]:focus, .form-signin input[type="password"]:focus, input:focus{
+  background-color: var(--cor-card) !important;
 }
 .form-signin input[id="usuario"]:-webkit-autofill, .form-signin input[type="password"]:-webkit-autofill{
   -webkit-box-shadow: var(--cor-card) inset;

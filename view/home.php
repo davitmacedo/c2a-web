@@ -10,7 +10,7 @@
   </div><!-- End .row -->
   <div class="row">
     <div class="col-md-12 mt-2">
-      <div class="card bg-card">
+      <div class="card">
         <div class="card-body">       
           <div class="table-responsive">
             <table class="table align-middle table-striped table-bordered table-hover table-sm text-center mt-2" id="geral">
