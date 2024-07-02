@@ -25,10 +25,10 @@
               <tbody iid="pesquisar">
                 <?php foreach($produtos as $key => $dado){ ?>
                   <tr>
-                    <th><?= $dado['TB01010_CODIGO'] ?></th>
-                    <th><?= $dado['TB01010_NOME'] ?></th>
-                    <th><?= $dado['TB01010_REFERENCIA'] ?></th>
-                    <th><?= trataNumero($dado['TB02001_QTPROD_U']) ?></th>
+                    <td><?= $dado['TB01010_CODIGO'] ?></td>
+                    <td><?= $dado['TB01010_NOME'] ?></td>
+                    <td><?= $dado['TB01010_REFERENCIA'] ?></td>
+                    <td><?= trataNumero($dado['TB02001_QTPROD_U']) ?></td>
                   </tr>
                 <?php } ?>
               </tbody>
