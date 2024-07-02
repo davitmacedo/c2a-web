@@ -30,14 +30,14 @@
               <tbody>
                 <?php foreach($usuarios as $key => $usuario){ ?>
                   <tr>
-                    <th><?= $usuario['nome'] ?></th>
-                    <th><?= $usuario['usuario'] ?></th>
-                    <th><?= $usuario['perfil'] ?></th>
-                    <th>
+                    <td><?= $usuario['nome'] ?></td>
+                    <td><?= $usuario['usuario'] ?></td>
+                    <td><?= $usuario['perfil'] ?></td>
+                    <td>
                       <a href="editar?id=<?= $usuario['idusuario'] ?>" title="Editar">
                         <i class="fa-solid fa-wrench"></i>
                       </a>
-                    </th>
+                    </td>
                   </tr>
                 <?php } ?>
               </tbody>
