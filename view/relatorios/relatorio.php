@@ -12,10 +12,12 @@
   </div><!-- End .row -->
   <div class="row">
     <div class="col-6">
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adicionarRelatorio">
-        <i class="fas fa-plus"></i> RELATÓRIO
-      </button>
+      <?php if($_SESSION['perfil']==1){ ?>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adicionarRelatorio">
+          <i class="fas fa-plus"></i> RELATÓRIO
+        </button>
+      <?php } ?>
       <!-- Modal -->
       <div class="modal fade" id="adicionarRelatorio" tabindex="-1" aria-labelledby="adicionarRelatorioLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -75,8 +77,10 @@
                 <td><?php echo $value['titulo']; ?></td>
                 <td>
                   <a href="relatorio-visualizar?rel=<?php echo $value['idrelatorio'] ?>" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></a>
-                  <a href="" data-bs-toggle="modal" data-bs-target="#editar<?php echo $value['idrelatorio']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
-                  <a href="<?php echo "relatorio?delete=" . $value['idrelatorio']; ?>" actionBtn="delete" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                  <?php if($_SESSION['perfil']==1){ ?>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#editar<?php echo $value['idrelatorio']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
+                    <a href="<?php echo "relatorio?delete=" . $value['idrelatorio']; ?>" actionBtn="delete" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                  <?php } ?>
                 </td>
               </tr>
 
